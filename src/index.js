@@ -61,7 +61,7 @@ export default class GradientScroll extends Component {
      `}
         <div className={styles.container}>
           <div className={styles.scrollable} onScroll={this.handleScroll} ref={r => (this.scrollableElement = r)}>
-            <div className={`${styles.overlay} ${overlayClasses.map(s => styles[s])}`}></div>
+            <div className={`${styles.overlay} ${overlayClasses.map(s => styles[s]).join(' ')}`}></div>
             <div className={styles.content} ref={r => (this.contentElement = r)}>
               {children}
             </div>
